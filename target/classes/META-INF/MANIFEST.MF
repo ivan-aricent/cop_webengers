@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: webengers_chatbot
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: imandal
-Implementation-Vendor-Id: com.aricent.cop.webengers
-Build-Jdk: 1.8.0_131
-Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
-

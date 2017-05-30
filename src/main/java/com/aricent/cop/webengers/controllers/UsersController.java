@@ -4,10 +4,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.aricent.cop.webengers.models.Users;
 import com.aricent.cop.webengers.repositories.UsersLoginRepository;
@@ -17,7 +18,7 @@ import com.aricent.cop.webengers.repositories.UsersMongoRepository;
  * This is the controller class containing custom REST endpoint for user login
  *
  */
-@Controller
+@RestController
 public class UsersController {
 
 	@Autowired
@@ -26,6 +27,7 @@ public class UsersController {
 	@Autowired
 	UsersLoginRepository usersLoginRepository;
 	
+	@CrossOrigin
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<?> login(@RequestBody Users users) {
 		
@@ -46,9 +48,5 @@ public class UsersController {
 			response = "Sorry! Unmatched username or password. Not Authorized";
 			return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
 		}
-			
-		
 	}
-	
-	
 }
