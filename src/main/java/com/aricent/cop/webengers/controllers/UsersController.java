@@ -27,7 +27,7 @@ public class UsersController {
 	@Autowired
 	UsersLoginRepository usersLoginRepository;
 	
-	@CrossOrigin
+//	@CrossOrigin
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<?> login(@RequestBody Users users) {
 		

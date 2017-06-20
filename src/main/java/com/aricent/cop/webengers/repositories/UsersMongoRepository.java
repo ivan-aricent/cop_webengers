@@ -11,7 +11,7 @@ import com.aricent.cop.webengers.models.Users;
  * users collection for usual CRUD operations.
  *
  */
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UsersMongoRepository extends MongoRepository<Users, String> {
 
